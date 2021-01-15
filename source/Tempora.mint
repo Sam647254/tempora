@@ -1,4 +1,14 @@
 module Tempora {
+   record Duration {
+      years : Number,
+      months : Number,
+      weeks : Number,
+      days : Number,
+      hours : Number,
+      minutes : Number,
+      seconds : Number
+   }
+
    fun now : Date {
       `new Date()`
    }
@@ -49,6 +59,30 @@ module Tempora {
 
    fun getDayOfTheWeek(date : Date) : Number {
       `#{date}.getDay()`
+   }
+
+   fun getYear(date : Date) : Number {
+      `#{date}.getFullYear()`
+   }
+
+   fun getHour(date : Date) : Number {
+      `#{date}.getHours()`
+   }
+
+   fun getMinute(date : Date) : Number {
+      `#{date}.getMinutes()`
+   }
+
+   fun getMonth(date : Date) : Number {
+      `#{date}.getMonth()` + 1
+   }
+
+   fun getSecond(date : Date) : Number {
+      `#{date}.getSeconds()`
+   }
+
+   fun getTimestamp(date : Date) : Number {
+      `#{date}.getTime()`
    }
 
    fun getUTCDate (date : Date) : Number {
